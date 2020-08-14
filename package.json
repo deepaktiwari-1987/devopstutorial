@@ -1,0 +1,23 @@
+{
+  "name": "devopstutorial",
+  "version": "1.0.0",
+  "description": "Devops  project setup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Please configure unit test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepaktiwari-1987/devopstutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepaktiwari-1987/devopstutorial/issues"
+  },
+  "homepage": "https://github.com/deepaktiwari-1987/devopstutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
