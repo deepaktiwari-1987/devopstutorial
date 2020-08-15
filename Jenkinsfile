@@ -19,14 +19,15 @@ def branchesName() {
   stages {
 
 	stage('Unit test and Code Coverage') {
-      when {
+      /*when {
         anyOf {
           branch 'dev' ; branch 'qa' ; branch 'master';
         }
-      }
+      }*/
     steps{
         script {
          // sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
+         sh "echo branch , ${env.BRANCH_NAME}"
 		 sh 'npm install ; npm run test'
          }
       }
