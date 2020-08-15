@@ -15,7 +15,12 @@ def branchesName() {
   environment {
     branch = branchesName()
   }
-  agent any
+  agent {
+        docker {
+            image 'node:6-alpine' 
+            args '-p 3000:3000' 
+        }
+}
   stages {
 
 	stage('Unit test and Code Coverage') {
@@ -27,7 +32,8 @@ def branchesName() {
     steps{
         script {
          // sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
-         sh "echo branch , ${env.BRANCH_NAME}"
+         sh "echo ${branch} , ${env.BRANCH_NAME}"
+         sh "echo ${env}"
 		 sh 'npm install ; npm run test'
          }
       }
