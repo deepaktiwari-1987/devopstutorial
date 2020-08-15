@@ -8,7 +8,7 @@ def branchesName() {
   } else if (branchName == "qa") {
     return "qa"
   } else if (branchName == "master") {
-    return "prod"
+    return "master"
   }
 }
  pipeline {
