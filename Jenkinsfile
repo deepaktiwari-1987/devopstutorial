@@ -15,12 +15,7 @@ def branchesName() {
   environment {
     branch = branchesName()
   }
-  agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
-}
+  agent any
   stages {
 
 	stage('Unit test and Code Coverage') {
