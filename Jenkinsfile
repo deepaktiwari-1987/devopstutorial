@@ -21,7 +21,7 @@ def branchesName() {
 	stage('Unit test and Code Coverage') {
       when {
         anyOf {
-          branch branch 'dev' ; branch 'qa' ; branch 'master';
+          branch 'dev' ; branch 'qa' ; branch 'master';
         }
       }
     steps{
