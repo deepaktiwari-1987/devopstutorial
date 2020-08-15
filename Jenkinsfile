@@ -33,7 +33,7 @@ def branchesName() {
      }
 
 
-   	stage('SonarQube Analysis') {
+   	/*stage('SonarQube Analysis') {
 	    environment {
         scannerHome = tool 'SonarQubeScanner'
         }
@@ -98,7 +98,7 @@ def branchesName() {
              }
 		}
       }
-    }
+    }*/
 
   }
  }
