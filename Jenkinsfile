@@ -14,7 +14,7 @@ def branchesName() {
  pipeline {
   environment {
     branch = branchesName()
-    CI = 'true',
+    CI = 'true'
     HOME = '.'
   }
   agent {
