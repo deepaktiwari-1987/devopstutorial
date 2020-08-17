@@ -26,7 +26,7 @@ def branchesName() {
       }*/
     steps{
         script {
-         // sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
+         sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash'
          sh "echo ${branch} , ${env.BRANCH_NAME}"
          sh "echo ${env}"
 		 sh 'npm install ; npm run test'
